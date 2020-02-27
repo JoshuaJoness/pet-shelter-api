@@ -3,6 +3,7 @@ const app = express ()
 const database = require('./database')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+require('dotenv').config()
 
 // Middleware
 app.use(cors({credentials: true}))
@@ -18,6 +19,6 @@ app.get('/',(req,res)=>{
 	res.render('index')
 })
 
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
 	console.log(`Ready on port 4000`);
 })

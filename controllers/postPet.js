@@ -1,7 +1,7 @@
 const Pet = require('../models/Pet')
 
 module.exports = (req, res) => {
-	console.log('********************');
+	console.log('********************', req.body);
 	Pet.create(req.body)
 		.then(data => {
 			res.send(data)
