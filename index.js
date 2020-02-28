@@ -20,5 +20,5 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(process.env.PORT, () => {
-	console.log(`Ready on port 4000`);
+	console.log(`Ready on port ${process.env.PORT}`);
 })
