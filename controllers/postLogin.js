@@ -8,9 +8,10 @@ module.exports = (req, res) => {
 		if (match) {
 			let obj = data.toObject()
 			let token = jwt.sign(obj, 'secret')
-			res.send({token})
+			res.send(token)
 		}
 	}).catch(err => {
+		res.send('err')
 		console.log(err);
 	})
 }
